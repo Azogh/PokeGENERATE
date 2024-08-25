@@ -12,7 +12,7 @@ import { AppInputComponent } from '../../components/app-input/app-input.componen
 import { AppButtonComponent } from '../../components/app-button/app-button.component';
 import { LoginService } from '../../services/login.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Route, Router } from '@angular/router';
+import { Route, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -25,6 +25,7 @@ import { Route, Router } from '@angular/router';
     AppInputComponent,
     AppInputComponent,
     AppButtonComponent,
+    RouterLink
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',

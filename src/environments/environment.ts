@@ -1,11 +1,12 @@
 // Your web app's Firebase configuration
 export const env = {
   firebaseConfig: {
-    apiKey: "AIzaSyDLeXS1B6GL4rThfn1N-LTiSBjUlsAPVB0",
-  authDomain: "saladeaula-e02d9.firebaseapp.com",
-  projectId: "saladeaula-e02d9",
-  storageBucket: "saladeaula-e02d9.appspot.com",
-  messagingSenderId: "853424140740",
-  appId: "1:853424140740:web:2c42ff6af4486d02f1b491"
-  },
+    apiKey: "AIzaSyDH2mfrFXGPhmgJVWZk01kGn5EI99eYCDo",
+  authDomain: "pokegenerate.firebaseapp.com",
+  projectId: "pokegenerate",
+  storageBucket: "pokegenerate.appspot.com",
+  messagingSenderId: "9885602077",
+  appId: "1:9885602077:web:9b847c9f4604af081fd1f4",
+  measurementId: "G-M88MQRMQLG"
+  }
 };

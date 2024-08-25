@@ -1,28 +1,49 @@
-# SalaDeAula
+# Projeto de Cadastro de Pokémon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+## Descrição
 
-## Development server
+Este projeto é um sistema de cadastro de Pokémon desenvolvido com Angular e Firebase. O objetivo é criar uma aplicação web onde os usuários podem gerenciar uma lista de Pokémon, realizar operações CRUD (Criar, Ler, Atualizar, Excluir), e interagir com uma API externa para gerar Pokémon aleatórios.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Funcionalidades
 
-## Code scaffolding
+- **Cadastro e Listagem de Pokémon**: Adicione novos Pokémon, visualize a lista de Pokémon cadastrados, edite e exclua registros.
+- **Integração com API**: Consuma dados da PokéAPI para gerar informações sobre Pokémon aleatórios.
+- **Autenticação e Proteção de Rotas**: Use Firebase Authentication para login e proteção de rotas.
+- **Customização de Pipe**: Implementação de um pipe personalizado para for2.ação de textos.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologias Utilizadas
 
-## Build
+- **Angular**: Framework para desenvolvimento do frontend.
+- **Firebase**: Serviço de backend para autenticação e banco de dados.
+- **Angular Material**: Biblioteca de componentes UI para Angular.
+- **PokéAPI**: API externa para dados de Pokémon.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalação
 
-## Running unit tests
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Azogh/my-anime-list.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Instale as dependências:
+   ```bash
+    npm install
 
-## Running end-to-end tests
+3. Configure as credenciais do Firebase:
+- Crie um projeto no Firebase Console.
+- Adicione as credenciais ao arquivo src/environments/environment.ts.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Inicie o servidor de desenvolvimento:
+    ```bash
+    ng serve
+    O projeto estará disponível em http://localhost:4200.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# fernando" 
+## USO 
+- **Página Inicial**: Visualize um Pokémon aleatório e gerencie a lista de Pokémon.
+- **CRUD**: Adicione, edite e exclua Pokémon da lista.
+- **Autenticação**: Faça login para acessar áreas protegidas da aplicação.
+
+## Estrutura do Projeto
+- **src/app/**: Contém todos os módulos, componentes e serviços do Angular.
+- **src/environments/**: Configurações de ambiente, incluindo as credenciais do Firebase.
+- **src/assets/**: Arquivos estáticos como imagens e estilos.

@@ -6,6 +6,7 @@ import { authGuard } from './guards/auth.guard';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AlunoComponent } from './pages/aluno/aluno.component';
 import { PublicaComponent } from './pages/publica/publica.component';
+import { PokemonRandomComponent } from './pages/pokemon-random/pokemon-random.component';
 
 export const routes: Routes = [
   { path: '', component: PublicaComponent },
@@ -14,6 +15,6 @@ export const routes: Routes = [
   { path: 'inicio', component: HomeComponent, canActivate: [authGuard] },
   { path: 'aluno', component: AlunoComponent, canActivate: [authGuard] },
   { path: 'aluno/:chave', component: AlunoComponent, canActivate: [authGuard] },
-
+  { path: 'pokemon-random', component: PokemonRandomComponent },
   { path: '**', component: NotFoundComponent },
 ];

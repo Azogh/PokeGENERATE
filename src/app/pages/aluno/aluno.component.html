@@ -1,6 +1,21 @@
-<form [formGroup]="form">
-  <app-input label="nome" [control]="form.controls['nome']" />
-  <app-input label="Sobrenome" [control]="form.controls['sobreNome']" />
-  <app-input label="idade" [control]="form.controls['idade']" />
-  <app-button [loading]="alunoService.loading" label="gravar" (click)="salvar()" />
-</form>
+<div class="container">
+  <div class="form-container">
+    <header class="header">
+      <h1>Cadastro de Pokémon</h1>
+    </header>
+
+    <span class="notification">Não se preocupe em usar Maiúsculo, uma das atividades do projeto era fazer um pipe e este pipe trabalha usando o uppercase sobre a primeira letra da palavra</span>
+
+    <form [formGroup]="form">
+      <app-input label="Nome" [control]="form.controls['nome']"></app-input>
+      <app-input label="ID" [control]="form.controls['id']"></app-input>
+      <app-input type="date" label="Data" [control]="form.controls['data']"></app-input>
+
+      <app-button
+        label="Gravar"
+        [loading]="alunoService.loading"
+        (click)="salvar()"
+      ></app-button>
+    </form>
+  </div>
+</div>

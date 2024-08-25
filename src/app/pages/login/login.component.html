@@ -1,12 +1,12 @@
-<div class="geral">
-  <div class="formulario">
+<div class="container">
+  <div class="form-container">
     <form [formGroup]="form">
-      <app-input label="E-mail" [control]="form.controls['email']" />
+      <app-input label="E-mail" [control]="form.controls['email']"></app-input>
       <app-input
         label="Senha"
         type="password"
         [control]="form.controls['senha']"
-      />
+      ></app-input>
 
       <app-button
         label="Entrar"
@@ -14,12 +14,13 @@
         icon="login"
         (onClick)="entrar()"
       ></app-button>
+
     </form>
     <div class="bottom">
-      <a href="/novaconta" mat-button>
+      <a mat-button routerLink="/novaconta">
         <mat-icon>add</mat-icon>
-        Nova conta</a
-      >
+        Nova conta
+      </a>
     </div>
   </div>
 </div>

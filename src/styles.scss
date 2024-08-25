@@ -8,3 +8,21 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+
+.ent {
+  background-color: #ff0000 !important; /* Vermelho */
+  color: #fff !important; /* Texto branco */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ent mat-icon {
+  margin-right: 8px;
+}
+
+

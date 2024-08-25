@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { MatToolbar, MatToolbarModule } from '@angular/material/toolbar';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-publica',
   standalone: true,
-  imports: [],
+  imports: [MatToolbarModule, RouterLink],
   templateUrl: './publica.component.html',
   styleUrl: './publica.component.scss'
 })
