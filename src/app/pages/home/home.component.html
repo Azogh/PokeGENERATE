@@ -1,3 +1,12 @@
+<div class="toolbar-container">
+  <mat-toolbar color="primary" class="toolbar-centered">
+    <span class="toolbar-title">Trabalho Final - Prog web</span>
+    <button mat-button (click)="logout()" aria-label="Sair">
+      <mat-icon>logout</mat-icon> Sair
+    </button>
+  </mat-toolbar>
+</div>
+
 <div class="container">
   <h1>Randomizador de Pokémon</h1>
   <h4>Para gerar um novo pokémon, atualize a página.</h4>
@@ -12,7 +21,7 @@
     <li *ngFor="let pokemon of alunos | async" class="pokemon-item">
       <div class="pokemon-info">
         Nome: {{ pokemon.nome | uppercase }}<br>
-        ID: {{ pokemon.id }}<br>
+          ID: {{ pokemon.id }}<br>
         Data: {{ pokemon.data | date:'dd/MM/yyyy' }}<br>
       </div>
       <div class="pokemon-actions">
@@ -27,6 +36,6 @@
   </ol>
 
   <div class="cadastro-button-container">
-    <button mat-button routerLink="/pokemon/cadastro">Cadastrar Pokémon</button>
+    <button mat-button routerLink="/aluno">Cadastrar Pokémon</button>
   </div>
 </div>

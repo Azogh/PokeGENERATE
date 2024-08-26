@@ -67,3 +67,24 @@ button[mat-button]:hover {
 button {
   margin: 0 5px;
 }
+
+.toolbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.toolbar-centered {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Ajuste conforme necessário */
+}
+
+.toolbar-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}

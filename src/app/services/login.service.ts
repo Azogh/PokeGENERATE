@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { consumerBeforeComputation } from '@angular/core/primitives/signals';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Injectable({
@@ -17,7 +16,7 @@ export class LoginService {
   }
 
   async criarNovaConta(email: string, senha: string, nome: string) {
-    console.log('criando novo usuairo');
+    console.log('criando novo usuario');
     this._loading = true;
     return this.auth
       .createUserWithEmailAndPassword(email, senha)
@@ -43,10 +42,18 @@ export class LoginService {
       .finally(() => (this._loading = false));
   }
 
+  async logout(): Promise<void> {
+    return this.auth.signOut().then(() => {
+      // Você pode adicionar lógica adicional aqui, como redirecionar para a página de login
+      console.log('Usuário deslogado com sucesso.');
+    });
+  }
+
   public get loading() {
     return this._loading;
   }
-  public async isLogado() {
+
+  public async isLogado(): Promise<boolean> {
     console.log(this.auth.currentUser);
     this._usuarioLogado = await this.auth.authState;
     return this._usuarioLogado != null;

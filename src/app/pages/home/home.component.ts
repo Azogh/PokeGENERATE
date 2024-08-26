@@ -10,6 +10,7 @@ import { Router, RouterLink } from '@angular/router';
 import { MedidaCasePipe } from '../../pipes/MedidaCase.pipe';
 import { PokemonRandomComponent } from '../pokemon-random/pokemon-random.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { LoginService } from '../../services/login.service'; // Importar o LoginService
 
 @Component({
   selector: 'app-home',
@@ -27,20 +28,19 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrls: ['./home.component.scss'], // Corrigido de styleUrl para styleUrls
 })
 export class HomeComponent {
   alunos?: Observable<any>;
 
   constructor(
     private alunoService: AlunoService, 
-    private route: Router
+    private route: Router,
+    private loginService: LoginService // Injete o LoginService
   ) {
-    // Obtém a lista de alunos do Firestore
     this.alunos = this.alunoService.listarAlunos();
   }
 
-  // Método para apagar um aluno pelo ID
   apagarAluno(chave: string) {
     this.alunoService.excluirAluno(chave).then(() => {
       console.log('Aluno excluído com sucesso.');
@@ -49,8 +49,15 @@ export class HomeComponent {
     });
   }
 
-  // Método para navegar para a página de edição de aluno
   atualizarAluno(chave: string) {
     this.route.navigateByUrl(`aluno/${chave}`);
+  }
+
+  logout() {
+    this.loginService.logout().then(() => {
+      this.route.navigateByUrl('/'); // Redirecionar para a página de login após o logout
+    }).catch((error) => {
+      console.error('Erro ao fazer logout:', error);
+    });
   }
 }

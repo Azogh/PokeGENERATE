@@ -2,19 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { AppInputComponent } from '../../components/app-input/app-input.component';
 import { AppButtonComponent } from '../../components/app-button/app-button.component';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  FormControl,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AlunoService } from '../../services/aluno.service';
 import { Aluno } from '../../models/aluno';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-aluno',
   standalone: true,
-  imports: [AppInputComponent, AppButtonComponent, ReactiveFormsModule],
+  imports: [AppInputComponent, AppButtonComponent, ReactiveFormsModule, MatButtonModule, MatIconModule],
   templateUrl: './aluno.component.html',
   styleUrls: ['./aluno.component.scss'],
 })
@@ -54,5 +51,9 @@ export class AlunoComponent implements OnInit {
         this.route.navigate(['/inicio'])
       );
     }
+  }
+
+  voltar() {
+    this.route.navigate(['/inicio']); // Ajuste a rota conforme necessário
   }
 }
