@@ -1,71 +1,69 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-    padding: 10px;
-    background: #ff0000;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    font-size: 2em;
-  }
-  
-  h4 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .pokemon-container {
-  
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-  
-  ol {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .aluno-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .aluno-info {
-    text-align: left;
-    margin-bottom: 10px;
-  }
-  
-  .aluno-actions {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .cadastro-button-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  button[mat-button] {
-    background-color: #ff0000;
-    color: #fff;
-  }
-  
-  button[mat-button]:hover {
-    background-color: #cc0000;
-  }
-  
-  button {
-    margin: 0 5px;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #ff0000;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 2em;
+}
+
+h4 {
+  text-align: center;
+  color: #333;
+}
+
+.pokemon-container {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pokemon-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pokemon-info {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.pokemon-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cadastro-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button[mat-button] {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+button[mat-button]:hover {
+  background-color: #cc0000;
+}
+
+button {
+  margin: 0 5px;
+}

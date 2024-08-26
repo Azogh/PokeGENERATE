@@ -1,9 +1,11 @@
 <div *ngIf="pokemon" class="pokemon-container">
   <h2>Seu pokémom é:</h2>
-  <h3 class="pokemon-name">{{ pokemon.name | toTitleCase }}</h3>
+  <h3 class="pokemon-name">{{ pokemon.name }}</h3>
   <div class="pokemon-image-container">
     <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" class="pokemon-image">
   </div>
   <p><strong>ID:</strong> {{ pokemon.id }}</p>
   <p><strong>Tipo:</strong> {{ pokemon.types[0].type.name }}</p>
+  <p><strong>Altura:</strong> {{ pokemon.height/10| MedidaCase }} ({{pokemon.height/10}} Metros)</p>
+
 </div>

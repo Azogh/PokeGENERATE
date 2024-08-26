@@ -1,26 +1,25 @@
 <div class="container">
   <h1>Randomizador de Pokémon</h1>
-  <h4>Para gerar um novo pokémom você deve apenas atualizar a página.</h4>
+  <h4>Para gerar um novo pokémon, atualize a página.</h4>
 
   <div class="pokemon-container">
     <app-pokemon-random></app-pokemon-random>
   </div>
 
- 
-  <h1>CRUD - pokémom - MYpersonalList</h1>
-  <h4>Ei! Se você gostou do pokémom acima não vá perdê-lo, salve-o para ir atrás em sua aventura</h4>
+  <h1>CRUD - Pokémon - MYpersonalList</h1>
+  <h4>Se você gostou do pokémon acima, salve-o para sua aventura!</h4>
   <ol>
-    <li *ngFor="let aluno of alunos | async" class="aluno-item">
-      <div class="aluno-info">
-        Nome: {{ aluno.nome | toTitleCase }}<br>
-        ID: {{ aluno.id }}<br>
-        Data: {{ aluno.data | date:'dd/MM/yyyy' }}<br>
+    <li *ngFor="let pokemon of alunos | async" class="pokemon-item">
+      <div class="pokemon-info">
+        Nome: {{ pokemon.nome | uppercase }}<br>
+        ID: {{ pokemon.id }}<br>
+        Data: {{ pokemon.data | date:'dd/MM/yyyy' }}<br>
       </div>
-      <div class="aluno-actions">
-        <button mat-button (click)="atualizarAluno(aluno.chave)">
+      <div class="pokemon-actions">
+        <button mat-button (click)="atualizarAluno(pokemon.chave)" aria-label="Editar Pokémon">
           <mat-icon>edit</mat-icon>
         </button>
-        <button mat-button (click)="apagarAluno(aluno.chave)">
+        <button mat-button (click)="apagarAluno(pokemon.chave)" aria-label="Excluir Pokémon">
           <mat-icon>delete</mat-icon>
         </button>
       </div>
@@ -28,6 +27,6 @@
   </ol>
 
   <div class="cadastro-button-container">
-    <button mat-button routerLink="/aluno">Cadastrar Pokémon</button>
+    <button mat-button routerLink="/pokemon/cadastro">Cadastrar Pokémon</button>
   </div>
 </div>

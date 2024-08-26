@@ -7,7 +7,7 @@ import { AlunoComponent } from '../aluno/aluno.component';
 import { AppButtonComponent } from '../../components/app-button/app-button.component';
 import { MatIcon } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
-import { toTitleCasePipe } from '../../pipes/toTitleCase.pipe';
+import { MedidaCasePipe } from '../../pipes/MedidaCase.pipe';
 import { PokemonRandomComponent } from '../pokemon-random/pokemon-random.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -20,7 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AlunoComponent, 
     AppButtonComponent, 
     MatIcon, 
-    toTitleCasePipe,
+    MedidaCasePipe,
     RouterLink,
     PokemonRandomComponent,
     MatIcon,
