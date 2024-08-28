@@ -44,7 +44,6 @@ export class LoginService {
 
   async logout(): Promise<void> {
     return this.auth.signOut().then(() => {
-      // Você pode adicionar lógica adicional aqui, como redirecionar para a página de login
       console.log('Usuário deslogado com sucesso.');
     });
   }

@@ -54,6 +54,6 @@ export class AlunoComponent implements OnInit {
   }
 
   voltar() {
-    this.route.navigate(['/inicio']); // Ajuste a rota conforme necessário
+    this.route.navigate(['/inicio']);
   }
 }
